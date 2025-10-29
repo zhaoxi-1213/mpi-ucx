@@ -1,0 +1,22 @@
+# -*- text -*-
+#
+# Copyright (c) 2016      Intel, Inc. All rights reserved.
+# Copyright (c) 2024-2025 Nanook Consulting  All rights reserved.
+# $COPYRIGHT$
+#
+# Additional copyrights may follow
+#
+# $HEADER$
+#
+#
+#
+[listener-thread-start]
+The PMIx server's listener thread failed to start. We cannot
+continue.
+#
+[collection-mismatch]
+Collection strategy during a collective operation (e.g., PMIx_Fence)
+is not homogeneous - at least one participating node has a
+collection strategy (i.e., collect vs non-collect) that differs
+from the other nodes. This must be corrected in order for us
+to proceed.

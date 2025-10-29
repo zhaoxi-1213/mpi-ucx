@@ -1,0 +1,70 @@
+Open MPI v6.0.x series
+======================
+
+This file contains all the NEWS updates for the Open MPI v6.0.x
+series, in reverse chronological order.
+
+Open MPI version v6.0.0
+--------------------------
+:Date: ...fill me in...
+
+- Added support for the MPI-4.0 embiggened APIs (i.e., functions with
+  ``MPI_Count`` parameters).
+
+- Fix build system and some internal code to support compiler
+  link-time optimization (LTO).
+
+- Open MPI now requires a C11-compliant compiler to build.
+
+- Open MPI now requires Python >= |python_min_version| to build.
+
+  - Open MPI has always required Perl 5 to build (and still does); our
+    Perl scripts are slowly being converted to Python.
+
+  .. note:: Open MPI only requires Python >= |python_min_version| and
+            Perl 5 to build itself.  It does *not* require Python or
+            Perl to build or run Open MPI or OSHMEM applications.
+
+- Removed the ROMIO package.  All MPI-IO functionality is now
+  delivered through the Open MPI internal "OMPIO" implementation
+  (which has been the default for quite a while, anyway).
+
+- Added support for MPI-4.1 functions to access and update ``MPI_Status``
+  fields.
+
+- MPI-4.1 has deprecated the use of the Fortran ``mpif.h`` include
+  file.  Open MPI will now issue a warning when the file is included
+  and the Fortran compiler supports the ``#warning`` directive.
+
+- Added support for the MPI-4.1 memory allocation kind info object and
+  values introduced in the MPI Memory Allocation Kinds side-document.
+
+- Added support for Intel Ponte Vecchio GPUs.
+
+- Extended the functionality of the accelerator framework to support
+  intra-node device-to-device transfers for AMD and NVIDIA GPUs
+  (independent of UCX or Libfabric).
+
+- Added support for MPI sessions when using UCX.
+
+- Added support for MPI-4.1 ``MPI_REQUEST_GET_STATUS_[ALL|ANY_SOME]`` functions.
+
+- Improvements to collective operations:
+  
+  - Added new ``xhc`` collective component to optimize shared memory collective
+    operations using XPMEM.
+
+  - Added new ``acoll`` collective component optimizing single-node
+    collective operations on AMD Zen-based processors.
+
+  - Added new algorithms to optimize Alltoall and Alltoallv in the
+    ``han`` component when XPMEM is available.
+
+  - Introduced new algorithms and parameterizations for Reduce, Allgather,
+    and Allreduce in the base collective component, and adjusted the ``tuned``
+    component to better utilize these collectives.
+
+  - Added new JSON file format to tune the ``tuned`` collective component.
+
+  - Extended the ``accelerator`` collective component to support
+    more collective operations on device buffers.

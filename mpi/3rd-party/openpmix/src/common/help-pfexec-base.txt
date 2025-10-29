@@ -1,0 +1,49 @@
+# -*- text -*-
+#
+# Copyright (c) 2004-2007 The Trustees of Indiana University and Indiana
+#                         University Research and Technology
+#                         Corporation.  All rights reserved.
+# Copyright (c) 2010      Cisco Systems, Inc.  All rights reserved.
+# Copyright (c) 2014      Research Organization for Information Science
+#                         and Technology (RIST). All rights reserved.
+# Copyright (c) 2017-2019 Intel, Inc.  All rights reserved.
+# Copyright (c) 2025      Nanook Consulting  All rights reserved.
+# $COPYRIGHT$
+#
+# Additional copyrights may follow
+#
+# $HEADER$
+#
+# This is the US/English general help file for Open RTE's ODLS Framework
+#
+
+#
+[fork-agent-not-found]
+The specified fork agent was not found:
+
+  Node:        %s
+  Fork agent:  %s
+
+The application cannot be launched.
+#
+[syscall fail]
+A system call failed that should not have.  In this particular case,
+a warning or error message was not displayed that should have been.
+Your job may behave unpredictably after this, or abort.
+
+  Local host:        %s
+  Application name:  %s
+  Function:          %s
+  Location:          %s:%d
+#
+execve error]
+PMIx tried to fork a new process via the "execve" system call but
+failed.  PMIx checks many things before attempting to launch a
+child process, but nothing is perfect. This error may be indicative
+of another problem on the target host, or even something as silly as
+having specified a directory for your application.
+
+  Local host:        %s
+  Working dir:       %s
+  Application name:  %s
+  Error:             %s

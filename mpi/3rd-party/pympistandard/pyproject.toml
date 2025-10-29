@@ -1,0 +1,32 @@
+[project]
+dynamic = ["version"]
+name = "pympistandard"
+description = "Python API to the MPI Standard."
+authors = [
+    {name = "Martin Ruefenacht", email = "m.a.ruefenacht@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=8.0.0",
+    "pytest-sugar>=1.0.0",
+    "black>=24.1.1",
+    "isort>=5.13.2",
+    "nox>=2023.4.22",
+]
+
+[tool.pdm.version]
+source = "file"
+path = "src/pympistandard/__init__.py"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

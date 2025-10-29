@@ -1,0 +1,33 @@
+# -*- text -*-
+#
+# Copyright (c) 2018-2020 Intel, Inc.  All rights reserved.
+# Copyright (c) 2021-2025 Nanook Consulting  All rights reserved.
+# $COPYRIGHT$
+#
+# Additional copyrights may follow
+#
+# $HEADER$
+#
+# This is a US/English help file
+#
+#
+[target full]
+PMIx was unable to create a shared memory backing file due
+to inadequate available space:
+
+  File: %s
+  Node: %s
+  Shmem size: %lu
+  Space available: %llu
+
+Please set the "PMIX_MCA_gds=hash" environmental variable to
+disable the shared memory system and try again.
+#
+[sys call fail]
+
+  Node: %s
+  SysCall: %s
+  Error: %s (%d)
+
+Please set the "PMIX_MCA_gds=hash" environmental variable to
+disable the shared memory system and try again.

@@ -1,0 +1,100 @@
+# -*- text -*-
+#
+# Copyright (c) 2004-2005 The Trustees of Indiana University and Indiana
+#                         University Research and Technology
+#                         Corporation.  All rights reserved.
+# Copyright (c) 2004-2005 The University of Tennessee and The University
+#                         of Tennessee Research Foundation.  All rights
+#                         reserved.
+# Copyright (c) 2004-2005 High Performance Computing Center Stuttgart,
+#                         University of Stuttgart.  All rights reserved.
+# Copyright (c) 2004-2005 The Regents of the University of California.
+#                         All rights reserved.
+# Copyright (c) 2008-2011 Cisco Systems, Inc.  All rights reserved.
+# Copyright (c) 2013      Los Alamos National Security, LLC. All rights
+#                         reserved.
+# Copyright (c) 2018      Intel, Inc. All rights reserved.
+# Copyright (c) 2022-2025 Nanook Consulting  All rights reserved.
+# $COPYRIGHT$
+#
+# Additional copyrights may follow
+#
+# $HEADER$
+#
+# This is the US/English help file for PMIX MCA error messages.
+#
+[missing-param-file]
+Process %d Unable to locate the variable file "%s" in the following search path:
+   %s
+#
+[deprecated-mca-env]
+A deprecated MCA variable value was specified in the environment or
+on the command line.  Deprecated MCA variables should be avoided;
+they may disappear in future releases.
+
+  Deprecated variable: %s
+  New variable:        %s
+#
+[deprecated-mca-cli]
+A deprecated MCA variable value was specified on the command line.  Deprecated
+MCA variables should be avoided; they may disappear in future releases.
+
+  Deprecated variable: %s
+  New variable:        %s
+#
+[deprecated-mca-file]
+A deprecated MCA variable value was specified in an MCA variable
+file.  Deprecated MCA variables should be avoided; they may disappear
+in future releases.
+
+  Deprecated variable: %s
+  Source file:         %s
+  New variable:        %s
+#
+[mutually-exclusive-vars]
+Two mutually-exclusive MCA variables were specified.  This can result
+in undefined behavior, such as ignoring the components that the MCA
+variables are supposed to affect.
+
+  1st MCA variable: %s
+    Source of value: %s
+  2nd MCA variable: %s
+    Source of value: %s
+#
+[re-register-with-different-type]
+An MCA variable was re-registered with a different type (i.e., it was
+either originally registered as an INT and re-registered as a STRING,
+or it was originally registered as a STRING and re-registered as an
+INT).  This a developer error; your job may abort.
+
+  MCA variable name: %s
+#
+[var-name-conflict]
+A name collision was detected on an MCA variable name. This can happen
+if two components try to register the same variable with slightly
+different name components. The conflicting variables are listed below:
+
+  MCA variable name: %s
+  New name: %s %s %s
+  Existing name: %s %s %s
+#
+[overridden-param-set]
+WARNING: A user-supplied value attempted to set a variable that is set
+in the override variable file (pmix-mca-params-override.conf).
+
+  Variable: %s
+
+The user-supplied value was ignored.
+#
+[invalid-value]
+An invalid value was supplied for an MCA variable.
+
+  Variable     : %s
+  Value        : %s
+#
+[invalid-value-enum]
+An invalid value was supplied for an enum variable.
+
+  Variable     : %s
+  Value        : %s
+  Valid values : %s
